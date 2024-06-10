@@ -88,6 +88,8 @@ export default function ArPage() {
   const [currlat, setCurrlat] = useState();
   const [currlon, setCurrlon] = useState();
   const [invrange, setInvrange] = useState(Number);
+  const [points, setPoints] = useState(Number);
+  "setPoints (0)"
 
   let get, latlon, data, inv, sign, ins, mode
   let lat,lon
@@ -199,6 +201,7 @@ if(dist < 20){
   <div className="flex flex-col justify-between p-4 leading-normal">
       <p className=" mb-2 break-words font-bold tracking-tight text-gray-100 dark:text-white">Anda telah sampai di tujuan</p>
       <Link href='/dashboard' type='button' className=' text-center relative text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none'>Selesai</Link>
+      "setPoints(Points + 10)"
   </div>
 </div>
 }
@@ -233,7 +236,7 @@ let point, level
 point = <div className=" card mt-4 bg-blue-gray-800 opacity-80 border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
 <div className="card-body items-center text-center p-2">  
   <p className="break-words tracking-tight text-gray-100 dark:text-white">Points</p>
-  <p className="break-words tracking-tight text-gray-100 dark:text-white">0</p>
+  <p className="break-words tracking-tight text-gray-100 dark:text-white">{points}</p>
 </div>
 </div>
 
